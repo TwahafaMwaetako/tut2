@@ -22,9 +22,11 @@ service / on new http:Listener(port) {
 resource function get people/[string id]() returns Person|http:NotFound {
  Person? a_person = group[id];
  if a_person is () {
- return http:NOT_FOUND;
+      return http:NOT_FOUND;
+ 
  } else {
- return a_person;
+      return a_person;
+ 
  }
 }
 
